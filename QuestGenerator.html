@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Quest Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quest Generator</h1>
+        <p>Click the button below to generate a random quest!</p>
+
+        <button id="generateQuest">Generate Quest</button>
+        <div id="questResult"></div>
+
+        <footer>
+            © 2024 Tabletop RPG - Powered by <span style="color: #ff00ff;">Geocities Nostalgia</span>
+        </footer>
+    </div>
+
+    <script>
+        const goals = [
+            'Retrieve the lost artifact', 
+            'Defeat the rampaging beast', 
+            'Deliver an important message', 
+            'Escort the merchant to safety',
+            'Solve the mystery of the haunted ruins'
+        ];
+
+        const subGoals = [
+            'Find the hidden key', 
+            'Speak with the village elder', 
+            'Collect 3 enchanted crystals', 
+            'Investigate the abandoned cabin', 
+            'Recover the missing map'
+        ];
+
+        const locations = [
+            'in the Darkwood Forest', 
+            'at the Crystal Caverns', 
+            'in the ancient fortress', 
+            'in the nearby village', 
+            'in the Silver Mines'
+        ];
+
+        const npcs = [
+            'Old Hermit', 
+            'Mysterious Traveler', 
+            'Local Blacksmith', 
+            'Village Healer', 
+            'Wandering Bard'
+        ];
+
+        const hints = [
+            'Rumor has it the artifact is hidden deep within the fortress walls.', 
+            'The village elder might know more about the beast\'s whereabouts.',
+            'The crystals are said to glow at night in the forest.',
+            'Strange lights have been seen near the abandoned cabin.',
+            'The Silver Mines are rumored to be cursed, but it\'s your only lead.'
+        ];
+
+        document.getElementById('generateQuest').addEventListener('click', function() {
+            const randomGoal = goals[Math.floor(Math.random() * goals.length)];
+            const randomSubGoal = subGoals[Math.floor(Math.random() * subGoals.length)];
+            const randomLocation = locations[Math.floor(Math.random() * locations.length)];
+            const randomNpc = npcs[Math.floor(Math.random() * npcs.length)];
+            const randomHint = hints[Math.floor(Math.random() * hints.length)];
+
+            const quest = `
+                <h2>Main Quest: ${randomGoal}</h2>
+                <p><strong>Sub-Goal:</strong> ${randomSubGoal}</p>
+                <p><strong>Location:</strong> ${randomLocation}</p>
+                <p><strong>NPC to Talk To:</strong> ${randomNpc}</p>
+                <p><strong>Description/Hint:</strong> ${randomHint}</p>
+            `;
+
+            document.getElementById('questResult').innerHTML = quest;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+body {
+    /* background-color: #000; */
+    background-image: url('path of a warrior.png');
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Scales the image to cover the entire page */
+    background-position: center; /* Centers the image on the page */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    color: #0ff;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid #ff0;
+    background-color: #111;
+}
+
+h1 {
+    color: #ff00ff;
+    text-shadow: 2px 2px 4px #00f;
+    font-size: 3em;
+}
+
+h2 {
+    color: #ff0;
+    text-align: left;
+    font-size: 2em;
+}
+
+p {
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1.2em;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ff0;
+}
+
+a {
+    color: #0f0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff0;
+}
+
+.sidebar {
+    float: left;
+    width: 150px;
+    margin-right: 20px;
+    background-color: #222;
+    border: 2px solid #ff0;
+    padding: 10px;
+    text-align: left;
+}
+
+.sidebar ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.sidebar li {
+    padding: 5px 0;
+}
+
+.content {
+    overflow: hidden;
+}
+
+footer {
+    margin-top: 40px;
+    border-top: 2px solid #ff0;
+    padding-top: 10px;
+    font-size: 0.9em;
+}
+
+.retro-banner {
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #f00;
+    padding: 10px;
+    border: 3px solid #00f;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+body {
+    background-color: #000;
+    color: #0ff;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid #ff0;
+    background-color: #111;
+}
+h1 {
+    color: #ff00ff;
+    text-shadow: 2px 2px 4px #00f;
+    font-size: 3em;
+}
+h2 {
+    color: #ff0;
+    text-align: left;
+    font-size: 2em;
+}
+p, ul {
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1.2em;
+}
+.rightSideBar{
+    float: right;
+    width: 150px;
+    margin-right: 20px;
+    background-color: #222;
+    border: 2px solid #ff0;
+    padding: 10px;
+    text-align: left;
+}
+
+
+.horizontal-navbar {
+    display: flex;
+    justify-content: flex-start; /* Aligns cards to the left */
+    flex-wrap: wrap; /* Allows cards to wrap onto the next line if needed */
+    gap: 20px; /* Space between cards */
+}
+
+.horizontal-navbar {
+    display: flex;
+    justify-content: flex-start; /* Aligns cards to the left */
+    flex-wrap: wrap; /* Allows cards to wrap onto the next line if needed */
+    gap: 20px; /* Space between cards */
+}
+
+.card {
+    background-color: #222;
+    border: 2px solid #ff0;
+    padding: 15px;
+    flex: 1; /* Makes cards flexible in size */
+    min-width: 150px; /* Minimum width for each card */
+    transition: background-color 0.3s;
+}
+
+.card:hover {
+    background-color: #333;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+}
+
+.card a {
+    color: #0f0;
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: #ff0;
+}
+
+
+.home-icon {
+    position: absolute; /* Position it relative to the nearest positioned ancestor */
+    top: 20px; /* Adjust this value to position it vertically */
+    right: 20px; /* Adjust this value to position it horizontally */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.home-icon img {
+    width: 40px; /* Set the size of the icon */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s;
+}
+
+.home-icon:hover img {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+/* Quest result styling */
+#questResult h2 {
+    margin-top: 20px;
+    font-size: 1.8em;
+    color: #0000ff; /* Retro blue heading */
+}
+
+#questResult p {
+    font-size: 1.2em;
+    color: #0f0;
+}
+
+#natureResult h2 {
+    margin-top: 20px;
+    font-size: 1.8em;
+    color: #0000ff; /* Retro blue heading */
+}
+
+#natureResult p, h3 {
+    font-size: 1.2em;
+    color: #0f0;
+}

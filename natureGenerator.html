@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Nature Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enhanced Nature Generator</h1>
+        <p>Click the button to generate an environment to explore!</p>
+
+        <!-- <label for="numDescriptions">Number of descriptions to display: </label> -->
+        <!-- <input type="number" id="numDescriptions" min="1" max="5" value="1"> -->
+
+        <button id="generateNature">Generate Nature</button>
+        <div id="natureResult"></div>
+
+        <footer>
+            © 2024 Tabletop RPG - Powered by <span style="color: #ff00ff;">Geocities Nostalgia</span>
+        </footer>
+    </div>
+
+    <script>
+        const natures = [
+            {
+                type: "Dungeon",
+                descriptions: [
+                    "A dark and damp underground labyrinth, filled with ancient traps and secrets.",
+                    "An ancient tomb, long forgotten by the world above, echoes with the sounds of long-dead creatures.",
+                    "Cramped and claustrophobic tunnels, the air stale with centuries of decay.",
+                    "Massive stone chambers connected by narrow hallways, their walls covered in strange runes.",
+                    "A forgotten fortress beneath the earth, its treasures long since plundered."
+                ],
+                actions: [
+                    "Explore hidden rooms", 
+                    "Disarm traps", 
+                    "Discover ancient artifacts",
+                    "Fight off treasure hunters", 
+                    "Search for secret passages"
+                ],
+                aesthetic: [
+                    "Moss-covered stone walls", 
+                    "Dripping water echoing in the distance",
+                    "Flickering torchlight casts strange shadows",
+                    "The air smells of mildew and ancient dust",
+                    "A chill breeze moves through the passage"
+                ],
+                lore: [
+                    "Built by a forgotten kingdom, this dungeon holds treasures and curses in equal measure.",
+                    "This was once the prison of a powerful mage, whose followers still lurk within its walls.",
+                    "Legends say a treasure of unimaginable power lies at the dungeon's heart.",
+                    "The dungeon was sealed by a powerful spell to keep something dangerous within.",
+                    "Many adventurers have entered, but few have returned from this dark labyrinth."
+                ],
+                foes: {
+                    easy: ["Giant Rats", "Skeleton Warriors", "Cave Bats"],
+                    medium: ["Oozes", "Orc Raiders", "Lesser Demons"],
+                    hard: ["Necromancer", "Ancient Dragon", "Lich"]
+                }
+            },
+
+            {
+                type: "Farm",
+                descriptions: [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                actions: [ //all of these items will be printed 
+                    "Rest", 
+                    "Eat", 
+                    "Observe animals",
+                    "Talk to farmers", 
+                    "Offer to help"
+                ],
+                aesthetic: [
+                    "Moss-covered stone walls", 
+                    "Dripping water echoing in the distance",
+                    "Flickering torchlight casts strange shadows",
+                    "The air smells of mildew and ancient dust",
+                    "A chill breeze moves through the passage"
+                ],
+                lore: [
+                    "Built by a forgotten kingdom, this dungeon holds treasures and curses in equal measure.",
+                    "This was once the prison of a powerful mage, whose followers still lurk within its walls.",
+                    "Legends say a treasure of unimaginable power lies at the dungeon's heart.",
+                    "The dungeon was sealed by a powerful spell to keep something dangerous within.",
+                    "Many adventurers have entered, but few have returned from this dark labyrinth."
+                ],
+                foes: {
+                    easy: ["Giant Rats", "Skeleton Warriors", "Cave Bats"],
+                    medium: ["Oozes", "Orc Raiders", "Lesser Demons"],
+                    hard: ["Necromancer", "Ancient Dragon", "Lich"]
+                }
+            },
+            // Additional nature types...
+        ];
+
+        // Utility function to select random entries from an array
+        function getRandomItems(array, num) {
+            let shuffled = array.slice(0);
+            let i = array.length;
+            let temp, index;
+            while (i--) {
+                index = Math.floor(Math.random() * (i + 1));
+                temp = shuffled[i];
+                shuffled[i] = shuffled[index];
+                shuffled[index] = temp;
+            }
+            return shuffled.slice(0, num);
+        }
+
+        function displayArrayElements(array) {
+            return array.join(', ');
+        }
+
+
+        document.getElementById('generateNature').addEventListener('click', function() {
+            const randomNature = natures[Math.floor(Math.random() * natures.length)];
+            // const numDescriptions = parseInt(document.getElementById('numDescriptions').value);
+
+            // Get random selections from each category
+            const randomDescriptions = getRandomItems(randomNature.descriptions, 1);
+            const Actions = displayArrayElements(randomNature.actions); 
+            const randomAesthetic = getRandomItems(randomNature.aesthetic, 2);
+            const randomLore = getRandomItems(randomNature.lore, 1);
+
+            // Create the HTML output
+            const natureHTML = `
+                <h2>Environment: ${randomNature.type}</h2>
+                <h3>Descriptions:</h3>
+                <ul>${randomDescriptions.map(desc => `<li>${desc}</li>`).join('')}</ul>
+
+                <h3>Things you can always do:</h3>
+                <ul><li>${Actions}</li></ul>
+                
+                <h3>Aesthetic Elements:</h3>
+                <ul>${randomAesthetic.map(aesthetic => `<li>${aesthetic}</li>`).join('')}</ul>
+                <h3>Lore:</h3>
+                <ul>${randomLore.map(lore => `<li>${lore}</li>`).join('')}</ul>
+                <h3>Foes</h3>
+                <p><strong>Easy:</strong> ${randomNature.foes.easy.join(', ')}</p>
+                <p><strong>Medium:</strong> ${randomNature.foes.medium.join(', ')}</p>
+                <p><strong>Hard:</strong> ${randomNature.foes.hard.join(', ')}</p>
+            `;
+
+            document.getElementById('natureResult').innerHTML = natureHTML;
+        });
+    </script>
+</body>
+</html>

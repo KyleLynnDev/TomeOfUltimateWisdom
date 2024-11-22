@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potion and Alchemy Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Potion and Alchemy Generator</h1>
+    <form id="potion-form">
+        <button type="submit">Generate Potion</button>
+    </form>
+
+    <h2>Generated Potion:</h2>
+    <div id="potion-output"></div>
+
+    <script>
+        // Lists of possible ingredients, potion names, and effects
+        const ingredients = [
+            "Dragon Scale", "Phoenix Feather", "Mandrake Root", "Eye of Newt", "Bat Wing",
+            "Unicorn Horn", "Elven Leaf", "Troll Fat", "Nightshade", "Wolfsbane"
+        ];
+
+        const potionNames = [
+            "Elixir of Life", "Potion of Healing", "Draught of Fire", "Invisibility Brew",
+            "Essence of Magic", "Potion of Strength", "Venomous Tincture", "Water Breathing Potion"
+        ];
+
+        const potionEffects = [
+            "Restores 10 hit points", "Grants invisibility for 5 minutes", "Gives fire resistance for 1 hour",
+            "Increases strength by 20% for 10 minutes", "Heals poison instantly", "Allows underwater breathing for 30 minutes",
+            "Cures all curses", "Boosts mana regeneration for 15 minutes"
+        ];
+
+        document.getElementById('potion-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const potion = generatePotion();
+            displayPotion(potion);
+        });
+
+        // Function to randomly generate a potion
+        function generatePotion() {
+            const randomIngredient = getRandomItem(ingredients);
+            const randomName = getRandomItem(potionNames);
+            const randomEffect = getRandomItem(potionEffects);
+
+            return {
+                ingredient: randomIngredient,
+                name: randomName,
+                effect: randomEffect
+            };
+        }
+
+        // Function to display the generated potion
+        function displayPotion(potion) {
+            const outputDiv = document.getElementById('potion-output');
+            outputDiv.innerHTML = `
+                <p><strong>Potion Name:</strong> ${potion.name}</p>
+                <p><strong>Main Ingredient:</strong> ${potion.ingredient}</p>
+                <p><strong>Effect:</strong> ${potion.effect}</p>
+            `;
+        }
+
+        // Utility function to pick a random item from a list
+        function getRandomItem(list) {
+            const randomIndex = Math.floor(Math.random() * list.length);
+            return list[randomIndex];
+        }
+    </script>
+</body>
+</html>
