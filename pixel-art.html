@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art - Retro Game Dev Wiki</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Inline CSS for collapsible elements for demonstration */
+        .collapsible {
+            background-color: #f4f4f4;
+            color: #333;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: left;
+            width: 100%;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .collapsible:after {
+            content: '\25BC'; /* Downward arrow */
+            float: right;
+        }
+
+        .collapsible.active:after {
+            content: '\25B2'; /* Upward arrow */
+        }
+
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pixel Art</h1>
+        <p>An introduction to the art of creating pixel-perfect designs for games.</p>
+    </header>
+    <main>
+        <section>
+            <button class="collapsible">What is Pixel Art?</button>
+            <div class="content">
+                <p>Pixel art is a digital art form where images are created and edited at the pixel level. It’s commonly used in retro-style games.</p>
+            </div>
+
+            <button class="collapsible">Tools for Pixel Art</button>
+            <div class="content">
+                <ul>
+                    <li>Aseprite</li>
+                    <li>Pyxel Edit</li>
+                    <li>Photoshop or GIMP</li>
+                </ul>
+            </div>
+
+            <button class="collapsible">Techniques and Tips</button>
+            <div class="content">
+                <p>Mastering pixel art requires attention to detail. Start small, learn about color palettes, and focus on key elements like shading and outlines.</p>
+            </div>
+
+            <button class="collapsible">Pixel Art in Game Development</button>
+            <div class="content">
+                <p>Pixel art can set the visual tone for a game. It’s often used in indie games and retro revivals to create a nostalgic feel.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Retro Game Dev Wiki. Made with ❤️ for aspiring game developers.</p>
+    </footer>
+
+    <script>
+        // JavaScript for toggling collapsible sections
+        document.querySelectorAll('.collapsible').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                const content = button.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

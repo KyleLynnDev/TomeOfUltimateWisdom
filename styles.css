@@ -27,7 +27,7 @@ body {
     padding: 20px; /* Optional: Adds padding inside the container if needed */
     max-width: 1200px; /* Optional: To limit the width of your content */
     margin-left: auto + 20px;
-    margin-right: auto ; 
+    margin-right: auto + 20; 
 }
 
 /* Header */
@@ -233,4 +233,35 @@ header h1 {
 header p {
     font-size: 1.2em;
     margin-bottom: 20px;
+}
+
+
+/* Target the entire scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the vertical scrollbar */
+    height: 12px; /* Height of the horizontal scrollbar */
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+    background: #f4f4f4; /* Light background for the track */
+    border-radius: 6px; /* Rounded corners */
+    border: 1px solid #ccc; /* Optional border for retro feel */
+}
+
+/* Scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ffcc00, #ff9900); /* Retro gradient */
+    border-radius: 6px; /* Rounded corners */
+    border: 2px solid #f4f4f4; /* Space around the thumb */
+}
+
+/* Scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #ffaa00, #ff7700); /* Slightly darker gradient */
+}
+
+/* Optional for styling the scrollbar corner where vertical and horizontal bars meet */
+::-webkit-scrollbar-corner {
+    background: #f4f4f4; /* Match the track background */
 }
