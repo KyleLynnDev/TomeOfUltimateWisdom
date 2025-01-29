@@ -54,6 +54,18 @@
     border-radius: 4px;
     border: none;
   }
+
+  .header-with-image {
+    display: flex;
+    align-items: center;  /* Aligns items vertically */
+    gap: 0.5rem;          /* Space between image and text */
+  }
+  
+  .header-with-image img {
+    width: 40px;  /* Adjust as needed */
+    height: 40px;
+  }
+  
   
   /* Main Layout Wrapper holds sidebar + main content side by side */
   .layout-wrapper {
@@ -64,7 +76,8 @@
   
   /* Sidebar Styles */
   .sidebar {
-    width: auto;
+    width: 240px;
+    max-width: 15%;
     background-color: #f0f0f0;
     padding: 1rem;
     overflow-y: auto; /* In case there's a long list of categories */
@@ -91,6 +104,42 @@
   .sidebar a:hover {
     text-decoration: underline;
   }
+
+
+/* ✅ Make Sidebar Smaller on Mobile */
+@media screen and (max-width: 768px) {
+    .sidebar {
+      width: 180px;  /* Reduce sidebar width */
+      max-width: 25%; /* Allow a bit more space */
+    }
+  
+    .sidebar h2 {
+      font-size: 1rem; /* Reduce header size */
+    }
+  
+    .sidebar a {
+      font-size: 0.85rem; /* Make text smaller */
+    }
+  }
+  
+  /* ✅ On Very Small Screens (Phones), Make Sidebar Even Smaller */
+  @media screen and (max-width: 480px) {
+    .sidebar {
+      width: 150px;  /* Shrink sidebar further */
+      max-width: 30%;
+      padding: 0.75rem; /* Reduce padding */
+    }
+  
+    .sidebar a {
+      font-size: 0.75rem; /* Make links even smaller */
+    }
+  }
+
+
+
+
+
+
   
   /* Main Content Area */
   .main-content {
