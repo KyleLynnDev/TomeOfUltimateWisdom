@@ -32,6 +32,9 @@
     min-height: 100vh;
   }
   
+
+
+
   /* Header (Top Nav) */
   .site-header {
     background-color: #222;
@@ -68,6 +71,10 @@
   }
   
   
+
+
+
+
   /* Main Layout Wrapper holds sidebar + main content side by side */
   .layout-wrapper {
     display: flex;
@@ -229,6 +236,7 @@ img{
     border-radius: 10px;
   }
   
+
   /* Responsive Adjustments (Example) */
 
   @media screen and (max-width: 768px) {
@@ -252,6 +260,9 @@ img{
     }
   }
   
+
+
+
   /* images on either side of <p> */
 
   .two-images-wrapper {
@@ -268,6 +279,8 @@ img{
     margin: 0 1rem;  /* Spacing around the paragraph */
     flex: 1;         /* Allows the paragraph to expand and push images to the sides */
   }
+
+
 
 
 
@@ -313,3 +326,30 @@ img{
     text-decoration: underline;
   }
   
+
+
+
+  /* Normal article */
+    .default-content {
+        background: #FBF4EB;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .default-content h2 {
+        margin-bottom: 1rem;
+      }
+      .default-content ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+      }
+      .default-content li {
+        margin-bottom: 0.5rem;
+      }
+      .default-content a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      .default-content a:hover {
+        text-decoration: underline;
+      }
