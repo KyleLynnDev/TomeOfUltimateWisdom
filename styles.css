@@ -12,9 +12,10 @@
   
   body {
     font-family: "FR";
-    color: #333;
-    background-color: #fafafa;
+    color: #2B3348;
+    background-color: #FBF4EB;
     background-image: url("images/background.png");
+    background-size:contain;
   }
   
   /* Container for the entire page layout */
@@ -23,7 +24,7 @@
     margin: 2em auto;
     padding: 1em;
     max-width: 80%;
-    background:#005fa3;
+    background:#194b0f;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     display: flex;
@@ -34,7 +35,7 @@
   /* Header (Top Nav) */
   .site-header {
     background-color: #222;
-    color: #fff;
+    color: #FBF4EB;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -44,7 +45,7 @@
     margin-right: 2rem;
   }
   .top-nav a {
-    color: #fff;
+    color: #FBF4EB;
     margin-right: 1rem;
     text-decoration: none;
   }
@@ -62,8 +63,8 @@
   }
   
   .header-with-image img {
-    width: 40px;  /* Adjust as needed */
-    height: 40px;
+    width: 70px;  /* Adjust as needed */
+    height: 70px;
   }
   
   
@@ -76,9 +77,9 @@
   
   /* Sidebar Styles */
   .sidebar {
-    width: 240px;
-    max-width: 15%;
-    background-color: #f0f0f0;
+    width: auto;
+    
+    background-color: #F9E5B7;
     padding: 1rem;
     overflow-y: auto; /* In case there's a long list of categories */
     border-right: 1px solid #ccc;
@@ -106,34 +107,7 @@
   }
 
 
-/* ✅ Make Sidebar Smaller on Mobile */
-@media screen and (max-width: 768px) {
-    .sidebar {
-      width: 180px;  /* Reduce sidebar width */
-      max-width: 25%; /* Allow a bit more space */
-    }
-  
-    .sidebar h2 {
-      font-size: 1rem; /* Reduce header size */
-    }
-  
-    .sidebar a {
-      font-size: 0.85rem; /* Make text smaller */
-    }
-  }
-  
-  /* ✅ On Very Small Screens (Phones), Make Sidebar Even Smaller */
-  @media screen and (max-width: 480px) {
-    .sidebar {
-      width: 150px;  /* Shrink sidebar further */
-      max-width: 30%;
-      padding: 0.75rem; /* Reduce padding */
-    }
-  
-    .sidebar a {
-      font-size: 0.75rem; /* Make links even smaller */
-    }
-  }
+
 
 
 
@@ -150,7 +124,7 @@
   
   /* Hero / Banner Section */
   .hero {
-    background: #fff;
+    background: #FBF4EB;
     padding: 1.5rem;
     margin-bottom: 2rem;
     border: 1px solid #ccc;
@@ -171,7 +145,7 @@
     cursor: pointer;
   }
   .hero button:hover {
-    background-color: #005fa3;
+    background-color: #6CA1E6;
   }
  
 
@@ -194,11 +168,11 @@ img{
 .grid-item {
     flex: 1 1 calc(30% - 2em);
     text-align: center;
-    color: white;
+    color: #FBF4EB;
 }
 .grid-item a {
     text-decoration: none;
-    color:#fff
+    color:#FBF4EB
 }
 .hover-block {
     background: #387ea0;
@@ -222,7 +196,7 @@ img{
   
   /* Featured / Latest Updates */
   .featured-updates {
-    background: #fff;
+    background: #FBF4EB;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -248,7 +222,7 @@ img{
   /* Footer */
   .site-footer {
     background-color: #222;
-    color: #fff;
+    color: #FBF4EB;
     text-align: center;
     padding: 1rem;
     border-radius: 10px;
