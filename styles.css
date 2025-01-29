@@ -230,6 +230,7 @@ img{
   }
   
   /* Responsive Adjustments (Example) */
+
   @media screen and (max-width: 768px) {
     .layout-wrapper {
       flex-direction: column;
@@ -238,6 +239,10 @@ img{
       width: 100%;
       border-right: none;
       border-bottom: 1px solid #ccc;
+    }
+
+    .sidebar h2{
+        margin-top: 1rem;
     }
     .main-content {
       padding: 1rem;
