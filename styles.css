@@ -267,14 +267,14 @@ img{
 
   /* Skill Guides Section */
 .skill-guides {
-    text-align: center;
+    text-align: left;
     margin: 2rem 0;
   }
   
   /* Grid Layout */
   .skill-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
+    grid-template-columns: repeat(5, 1fr); /* Creates 3 columns */
     gap: 1rem; /* Space between items */
     justify-items: center; /* Centers items in each grid cell */
     max-width: 600px; /* Adjust based on preference */
