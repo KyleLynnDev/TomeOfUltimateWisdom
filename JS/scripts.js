@@ -9,8 +9,8 @@ function loadPartial(elementId, filePath) {
   }
   
   window.addEventListener("DOMContentLoaded", () => {
-    loadPartial("header-container", "header.html");
-    loadPartial("sidebar-container", "sidebar.html");
-    loadPartial("footer-container", "footer.html");
+    loadPartial("header-container", "../partials/header.html");
+    loadPartial("sidebar-container", "../partials/sidebar.html");
+    loadPartial("footer-container", "../partials/footer.html");
   });
   
