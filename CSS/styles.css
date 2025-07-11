@@ -128,6 +128,7 @@
     flex: 1;
     padding: 1rem 2rem;
     overflow-y: auto;
+    background-color: #c0a886;
   }
   
   /* Hero / Banner Section */
@@ -183,7 +184,7 @@ img{
     color:#FBF4EB
 }
 .hover-block {
-    background: #387ea0;
+    background: #00405a ;
     padding: 0.5em;
     border-radius: 10px;
     transition: transform 0.3s, background 0.3s;
@@ -352,4 +353,62 @@ img{
       }
       .default-content a:hover {
         text-decoration: underline;
+      }
+
+
+
+
+      /* skills table section rules */
+
+
+
+
+      .skills-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+        background-color: #fff;
+        color: #2B3348;
+        font-size: 0.95rem;
+      }
+      
+      .skills-table th,
+      .skills-table td {
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        text-align: left;
+        vertical-align: top;
+      }
+      
+      .skills-table th {
+        background-color: #f5d28f;
+        font-weight: bold;
+      }
+      
+      .skills-table tr:nth-child(even) {
+        background-color: #fdf7ee;
+      }
+
+
+
+
+      /* float image section rules */
+
+
+
+
+      .float-image {
+        float: right;
+        width: 200px; /* or whatever size looks best */
+        margin: 0 0 1rem 1rem; /* top, right, bottom, left */
+        border-radius: 8px;
+        border: 1px solid #ccc;
+      }
+
+      @media screen and (max-width: 600px) {
+        .float-image {
+          float: none;
+          display: block;
+          margin: 1rem auto;
+        }
       }
